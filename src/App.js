@@ -33,6 +33,7 @@ function LittlestTokyo({ ...props }) {
     const offset = 1 - scroll.offset
    // action.time = THREE.MathUtils.damp(action.time, (action.getClip().duration / 2) * offset, 100, delta)
     state.camera.position.set(Math.sin(offset) * -10, Math.atan(offset * Math.PI * 2) * 5, Math.cos((offset * Math.PI) / 3) * -1.4)
+    
     state.camera.lookAt(0, 0, 0)
   })
   return <primitive object={scene} {...props} />
